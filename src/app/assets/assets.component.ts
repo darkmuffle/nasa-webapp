@@ -28,7 +28,7 @@ export class AssetsComponent implements OnInit {
           let imageLink   = imagesList[key].href; ;
           //Getting the last 8 elements of the link, we just need to check whether is contains the orig string or not since we already know the media type. 
           if (imageLink.substring(imageLink.length -8 , imageLink.length-4) == 'orig'){
-            this.asset['href_orig'] = this._sanitizer.bypassSecurityTrustResourceUrl(imageLink)
+            this.asset['href_orig'] = this._sanitizer.bypassSecurityTrustResourceUrl('https://'+imageLink.split('://').pop())
           }
         }
       }) ; 

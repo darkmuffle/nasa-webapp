@@ -33,14 +33,14 @@ button {
     flex-direction: column;
 }
 
-.assets iframe {
+.assets video {
     width : 60% ; 
     height : 60% ;
     margin : 1vh auto ; 
 
 }
 
-.assets iframe:focus {
+.assets video:focus {
     outline : none ; 
 }
 
