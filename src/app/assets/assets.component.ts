@@ -1,5 +1,5 @@
 import { Component, OnInit, ɵɵtrustConstantResourceUrl } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { DomSanitizer } from '@angular/platform-browser';
 
 //Service that we use to communicate with the nasa api  
 import {NasaApiService} from '../nasa-api.service'
@@ -13,7 +13,7 @@ import {asset} from '../asset'
 })
 export class AssetsComponent implements OnInit {
   asset : asset ;
-  constructor(private nasaService : NasaApiService) { }
+  constructor(private nasaService : NasaApiService , private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     //Getting the asset object from the previous search result, it contains the description and the media type that we can use
@@ -28,7 +28,7 @@ export class AssetsComponent implements OnInit {
           let imageLink   = imagesList[key].href; ;
           //Getting the last 8 elements of the link, we just need to check whether is contains the orig string or not since we already know the media type. 
           if (imageLink.substring(imageLink.length -8 , imageLink.length-4) == 'orig'){
-            this.asset['href_orig'] = imageLink
+            this.asset['href_orig'] = this._sanitizer.bypassSecurityTrustResourceUrl(imageLink)
           }
         }
       }) ; 

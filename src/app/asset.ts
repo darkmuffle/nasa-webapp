@@ -5,6 +5,6 @@ export interface asset {
     short_description : string ; 
     long_description : string ; 
     media_type : string ; 
-    href_orig ? : string ; 
+    href_orig ? : any ; 
   }
   

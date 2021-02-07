@@ -4,11 +4,10 @@
     <h2>Description</h2>
     <p >{{asset.long_description}}</p>
     <!-- This only renders if the media type is an image-->
-    <img *ngIf = "asset.media_type === 'image' " src = {{asset.href_orig}}>
+    <img *ngIf = "asset.media_type === 'image' " [src]="asset.href_orig">
 
     <!-- This will render if the media type is a video-->
-    <video *ngIf = "asset.media_type === 'video'"  controls>
-        <source src={{asset.href_orig}} type="video/mp4" />
-    </video>
+    <iframe *ngIf = "asset.media_type === 'video'"  [src]="asset.href_orig" >
+    </iframe>
 
 </div>
