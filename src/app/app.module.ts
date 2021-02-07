@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
+import {HttpClientModule} from '@angular/common/http'
+import {FormsModule} from '@angular/forms';
+import { CardsComponent } from './cards/cards.component';
+import { AssetsComponent } from './assets/assets.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    CardsComponent,
+    AssetsComponent
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

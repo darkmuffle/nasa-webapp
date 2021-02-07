@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align : center ; 
+    font-family: Tajawal, sans-serif;
+    font-weight: 400;
+    margin : 5% ;
+
+}
+
+h2{
+    text-align : left ; 
+    font-family : Tajawal , sans-serif ;
+}
+
+p{
+    font-family : Roboto, sans-serif ; 
+    margin-top : 0 ; 
+}
+
+button {
+    width :10%; 
+    height : auto ; 
+}
+
+.assets {
+    margin : auto ; 
+    width : 80vw ; 
+    height : 100vh ; 
+    display : flex ; 
+    flex-direction: column;
+}
+
+.assets video {
+    width : 60% ; 
+    height : 60% ;
+    margin : 1vh auto ; 
+
+}
+
+.assets img {
+    width : 60% ; 
+    height : 60% ; 
+    margin : 1vh auto
+}

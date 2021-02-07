@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Nasa';
+  src: url('./Nasa.ttf')  format('truetype');
+  font-weight: bold;
+  }
+
+h1{
+    font-family: 'Nasa';
+    text-align : center ; 
+    font-size: 60px; 
+}
+
+/* Container for the cards, a card is one result of a search operation */ 
+.container{
+    margin : 2vh auto ; 
+    display : flex ; 
+    height : 70vh ; 
+    width : 80%;
+    flex-wrap: wrap;
+    border : solid white ; 
+    justify-content : space-between ; 
+    overflow: scroll ; 
+    transition : 1s height 0s ;
+    
+}
+
+.container:empty{
+  width : 0px ; 
+  height : 0px ;
+  transition: 0.1s 
+}
+
+/* Styling of the individual card elements*/
+.card {
+    display : flex ; 
+    justify-content : space-between;
+    align-items : center ; 
+    flex-direction : column; 
+    width : 20% ;
+    height : 40%; 
+    margin : 0.5% ;
+    transition : 0.2s ; 
+    box-shadow: 0px 4px 8px 0px #CEBACD;
+    font-family:  Roboto , sans-serif;
+    background-color : white ; 
+    padding : 10px ;
+
+}
+
+.card p {
+    text-align : center;
+    height : 20% ;
+    margin : 0px ; 
+    padding: 2% ; 
+    font-family: Tajawal , sans-serif;
+    overflow : hidden ; 
+}
+
+.card img {
+    width : 90% ; 
+    height : 80% ;
+    overflow: hidden ; 
+    border-bottom : solid 1px #DDA7EB ; 
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 #6B0355;
+    cursor : pointer ; 
+  }
+
+
+
+/* Styling the search side of things*/
+.search {
+    height : 5vh ;
+    width : 20vw  ; 
+    margin : auto  ;
+    display : flex ; 
+    flex-direction : column; 
+    align-items : center; 
+    justify-content : center ; 
+    border : solid black 1px ; 
+    border-radius: 50px;
+}
+
+.search input {
+    width : 90% ; 
+    height : 90% ;
+    border : none ;
+
+}
+
+.search input:focus {
+    outline : none ; 
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background : none ;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#6B235C ;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6B0355;
+  }
+

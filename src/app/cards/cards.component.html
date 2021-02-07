@@ -1,0 +1,14 @@
+<h1>Nasa</h1>
+
+<!-- Top section of the search page, contains the search bar, always renders-->
+<div class = 'search'>
+    <input type = "text" (keydown.enter) = "sendSearch()" [(ngModel)]  = "searchTerm" >
+</div>
+
+<!-- Bottom section only renders when we have results to show-->
+<div class = 'container' *ngIf = "results"  >
+    <div  class = 'card ' *ngFor = "let result of results" (click) = "clickOnAsset(result)" [routerLink]="['/asset', result.nasa_id]">
+        <img src = {{result.href}} >
+        <p>{{result.title}}</p>
+    </div>
+</div>
