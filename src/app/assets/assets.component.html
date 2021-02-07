@@ -7,8 +7,8 @@
     <img *ngIf = "asset.media_type === 'image' " [src]="asset.href_orig">
 
     <!-- This will render if the media type is a video-->
-    <video  *ngIf = "asset.media_type === 'video'" controls>
-        <source [src] ="asset.href_orig">
-    </video>
+    <iframe  *ngIf = "asset.media_type === 'video'" [src] ="asset.href_orig">
+       
+        </iframe>
 
 </div>
